@@ -26,8 +26,13 @@ manifest:
       url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: dsifry #BONGO
+      url-base: https://github.com/dsifry #BONGO
 
   projects:
+    - name: eyelash_corne
+      url: https://github.com/a741725193/zmk-new_corne
+      revision: main
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
@@ -45,21 +50,9 @@ manifest:
       path: modules/zmk/tri-state
     - name: zmk-unicode
       path: modules/zmk/unicode
-
-    # Only source necessary Zephyr modules. Remove this entire section to restore
-    # the default (needed for less common hardware).
-    - name: zephyr
-      remote: zmkfirmware
-      revision: v3.5.0+zmk-fixes
-      clone-depth: 1
-      import:
-        name-allowlist:
-          - cmsis
-          - hal_nordic
-          - hal_rpi_pico
-          - hal_stm32
-          - lvgl
-          - tinycrypt
+  - name: nice-view-mod #BONGO
+      remote: dsifry #BONGO
+      revision: main #BONGO
 
   self:
     path: config
